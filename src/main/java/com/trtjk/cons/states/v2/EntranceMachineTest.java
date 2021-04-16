@@ -11,7 +11,6 @@ class EntranceMachineTest {
     @Test
     void should_be_unlocked_when_insert_coin_given_a_entrance_machine_with_locked_state() {
         EntranceMachine entranceMachine = new EntranceMachine(new LockedEntranceMachineState());
-
         String result = entranceMachine.execute(Action.INSERT_COIN);
 
     }
@@ -26,9 +25,6 @@ class EntranceMachineTest {
     @Test
     void should_fail_when_execute_invalid_action_given_a_entrance_with_locked_state() {
         EntranceMachine entranceMachine = new EntranceMachine(new LockedEntranceMachineState());
-
-        /*assertThatThrownBy(() -> entranceMachine.execute(null))
-                .isInstanceOf(InvalidActionException.class);*/
     }
 
     @Test
