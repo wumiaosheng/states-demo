@@ -1,16 +1,17 @@
-package com.trtjk.cons.states.v2.constants;
+package com.trtjk.cons.states.v2.interfaces;
 
+import com.trtjk.cons.states.v2.constants.EntranceMachine;
 import com.trtjk.cons.states.v2.interfaces.EntranceMachineState;
 
 public class LockedEntranceMachineState implements EntranceMachineState {
 
     @Override
     public String insertCoin(EntranceMachine entranceMachine) {
-        return entranceMachine.open();
+        return null;
     }
 
     @Override
     public String pass(EntranceMachine entranceMachine) {
-        return entranceMachine.alarm();
+        return null;
     }
 }

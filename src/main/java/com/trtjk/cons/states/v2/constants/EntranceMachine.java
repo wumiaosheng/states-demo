@@ -6,10 +6,6 @@ import java.util.Objects;
 
 public class EntranceMachine {
 
-    private EntranceMachineState locked = new LockedEntranceMachineState();
-
-    private EntranceMachineState unlocked = new UnlockedEntranceMachineState();
-
     private EntranceMachineState state;
 
     public EntranceMachine(EntranceMachineState state) {
@@ -26,34 +22,6 @@ public class EntranceMachine {
         }
 
         return state.insertCoin(this);
-    }
-
-    public boolean isUnlocked() {
-        return state == unlocked;
-    }
-
-    public boolean isLocked() {
-        return state == locked;
-    }
-
-    public String open() {
-        setState(unlocked);
-        return "opened";
-    }
-
-    public String alarm() {
-        setState(locked);
-        return "alarm";
-    }
-
-    public String refund() {
-        setState(unlocked);
-        return "refund";
-    }
-
-    public String close() {
-        setState(locked);
-        return "closed";
     }
 
     private void setState(EntranceMachineState state) {

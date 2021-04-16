@@ -1,5 +1,8 @@
-package com.trtjk.cons.states.v3.constant;
+package com.trtjk.cons.states.v3;
 
+import com.trtjk.cons.states.v3.constant.Action;
+import com.trtjk.cons.states.v3.constant.EntranceMachineState;
+import com.trtjk.cons.states.v3.constant.EntranceMachineTransaction;
 import com.trtjk.cons.states.v3.interfaces.AlarmEvent;
 import com.trtjk.cons.states.v3.interfaces.CloseEvent;
 import com.trtjk.cons.states.v3.interfaces.OpenEvent;
